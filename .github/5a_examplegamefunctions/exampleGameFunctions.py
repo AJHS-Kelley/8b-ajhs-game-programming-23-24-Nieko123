@@ -8,16 +8,32 @@ def raceDistance(param1):
     pass
 
 def hurdleSuccess():
-    choices = ['X', 'A', 'W']
+    choices = ['x', 'a', 'w']
     computerChoice = random.choice(choices)
 
-    userchoice = input("enter one of the folowing(X,A,W);\n").lower()
+    userChoice = input("enter one of the folowing(X,A,W);\n").lower()
 
-    if userchoice not in choices:
+    if userChoice not in choices:
         print("Choice one of the choiceses silly")
         hurdleSuccess()
 
     print("CPU choice:", computerChoice)
+    print("You chose:", userChoice)
+
+    if userChoice == computerChoice:
+        print("you and the computer both got over the hurdle!")
+    elif (userChoice == 'x' and computerChoice == 'w') or \
+         (userChoice == 'a' and computerChoice == 'x') or \
+         (userChoice == 'w' and computerChoice == 'a'):
+        print("you got over the hurdle and the computer didn't lol!")
+    else:
+        print("You fell and the computer didn't, loser")
+    
+    playAgain = input("Want to run it back? (yes/no):\n").lower()
+    if playAgain == 'yes':
+        playAgain()
+    else:
+        print("it's been fun bye")
 
 def raceOutcome(param1, param2, param3):
     pass
