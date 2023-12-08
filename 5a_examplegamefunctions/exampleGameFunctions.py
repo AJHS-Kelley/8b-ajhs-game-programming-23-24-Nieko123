@@ -1,6 +1,17 @@
 # Example Game Function project, Nieko Garnes v0.0
 import random
 
+def playAgain():
+    userChoices = ['yes']
+    print("Do you want to play again? Yes or No?:\n")
+    if userChoices:
+        userChoices = 'yes' or 'y'
+        return input().lower().startswith('y')
+    else:
+        print("good game")
+
+playAgain()
+
 def startRace():
     userChoices = ['yes']
     print("Are you ready to start the race?(yes or no):\n")
@@ -10,7 +21,7 @@ def startRace():
     else:
         print("Get out my face")
 
-startRace()
+
 
 def hurdleSuccess():
     choices = ['x', 'a', 'w']
@@ -36,17 +47,17 @@ def hurdleSuccess():
     
 hurdleSuccess()
 
-def playAgain():
+def startRace():
     userChoices = ['yes']
-    print("Do you want to play again? Yes or No?:\n")
+    print("Are you ready to start the race?(yes or no):\n")
     if userChoices:
+        userChoices = input().upper()
         userChoices = 'yes' or 'y'
         return input().lower().startswith('y')
     else:
-        print("good game")
-
+        print("Get out my face")
+        
 playAgain()
-
 
 
 
