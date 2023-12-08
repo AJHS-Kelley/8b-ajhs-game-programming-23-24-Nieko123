@@ -1,9 +1,11 @@
 # Example Game Function project, Nieko Garnes v0.0
 import random
 
+# FINISH
 def startRace():
     pass
 
+# FINISH
 def raceDistance(param1):
     pass
 
@@ -31,17 +33,15 @@ def hurdleSuccess():
     
     playAgain = input("Want to run it back? (yes/no):\n").lower()
     if playAgain == 'yes':
-        playAgain()
+        playAgain() # You don't have a play again function. 
     else:
         print("it's been fun bye")
 
-def raceOutcome(param1, param2, param3):
-    pass
-
+hurdleSuccess()
 def raceOutcome(laps, speed, place):
-    if laps > 1 and speed >= 50 and place == 'Won':
+    if laps > 1 and speed > 50 and place == 'Won':
         raceOutcome = True
-    elif laps > 1 and speed >= 50 and place == 'lose':
+    elif laps > 1 and speed <= 50 and place == 'lose':
         raceOutcome = False
     else:
         print(' Aww man, You lose!\n')
@@ -49,5 +49,7 @@ def raceOutcome(laps, speed, place):
         return raceLose
     return raceOutcome
 
+raceOutcome(5, 10, "Lose")
 
-#i like to chase 1 year olds because they're fun to tickle
+
+
