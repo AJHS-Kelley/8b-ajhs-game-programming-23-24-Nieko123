@@ -5,10 +5,11 @@ import random
 def startRace():
     print("Are you ready to start the race?(yes or no):\n")
     if input == 'yes':
-        playAgain
-
-    if input == 'no':
+        playAgain()
+    else: 
         print("Get out of my face")
+    
+        
 
 
 def playAgain():
