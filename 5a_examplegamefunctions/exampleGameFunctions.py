@@ -3,11 +3,17 @@ import random
 
 # FINISH
 def startRace():
-    pass
+    print("Are you ready to start the race?(yes or no):\n")
+    if input == 'yes':
+        playAgain
 
-# FINISH
-def raceDistance(param1):
-    pass
+    if input == 'no':
+        print("Get out of my face")
+
+
+def playAgain():
+    print('Do you want to play again? Yes or No?')
+    return input().lower().startswith('y')
 
 def hurdleSuccess():
     choices = ['x', 'a', 'w']
