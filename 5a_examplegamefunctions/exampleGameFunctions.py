@@ -1,20 +1,16 @@
 # Example Game Function project, Nieko Garnes v0.0
 import random
 
-# FINISH
 def startRace():
+    userChoices = ['yes']
     print("Are you ready to start the race?(yes or no):\n")
-    if input == 'yes':
-        playAgain()
-    else: 
-        print("Get out of my face")
-    
-        
+    if userChoices:
+        userChoices = input().upper()
+        userChoices = 'yes' or 'y'
+    else:
+        print("Get out my face")
 
-
-def playAgain():
-    print('Do you want to play again? Yes or No?')
-    return input().lower().startswith('y')
+startRace()
 
 def hurdleSuccess():
     choices = ['x', 'a', 'w']
@@ -38,25 +34,20 @@ def hurdleSuccess():
     else:
         print("You fell and the computer didn't, loser")
     
-    playAgain = input("Want to run it back? (yes/no):\n").lower()
-    if playAgain == 'yes':
-        playAgain() # You don't have a play again function. 
-    else:
-        print("it's been fun bye")
-
 hurdleSuccess()
-def raceOutcome(laps, speed, place):
-    if laps > 1 and speed > 50 and place == 'Won':
-        raceOutcome = True
-    elif laps > 1 and speed <= 50 and place == 'lose':
-        raceOutcome = False
-    else:
-        print(' Aww man, You lose!\n')
-        raceLose = True
-        return raceLose
-    return raceOutcome
 
-raceOutcome(5, 10, "Lose")
+def playAgain():
+    userChoices = ['yes']
+    print("Do you want to play again? Yes or No?:\n")
+    if userChoices:
+        userChoices = 'yes' or 'y'
+        return input().lower().startswith('y')
+    else:
+        print("good game")
+
+playAgain()
+
+
 
 
 
