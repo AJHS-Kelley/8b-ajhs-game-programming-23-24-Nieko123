@@ -5,6 +5,8 @@ class Person: # Use PascalCase
         self.name = name
         self.age = age
         self.weight = weight
+        self.weakness = None
+        self.nemesis = None
 
     # To String Function
     def __str__(self):
