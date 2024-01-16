@@ -24,7 +24,7 @@ def genDNA() -> str:
 
 dna = genDNA()
 
-def genRNA(dnaSequence: str) -> tuple:
+def doTranscription(dnaSequence: str) -> tuple:
     print(f"The DNA sequenceis {dnaSequence}.\n")
     print("Youwill now generate the RNA sequence that would match.\n")
     print("Please remember, in the RNA sequence U pairs with A from the DNA sequence.\n")
@@ -37,6 +37,25 @@ def genRNA(dnaSequence: str) -> tuple:
     # tuples are UNCHANGEABLE -- you cannot add, modify, or delte after creating
     # tuples can have duplicate values.
 
-rna = genRNA(dna)
-print(rna)
+def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
+    isMatch = False
+    if len(dnaSequence) != len(rnaSequence):
+        print("The sequences are different lengths and cannot match.\n")
+        return isMatch
+    for dnaBase, rnaBase in(dnaSequence, rnaSequence):
+        if dnaBase == "A" and rnaBase == "U":
+            isMatch = True
+        elif dnaBase "C" and rnaBase == "C"
+            isMatch = True
+        elif dnaBase "G" and rnaase == "C"
+            isMatch = True
+        elif dnaBase "T" and rnaBase =="A"
+            isMatch = True
+        else:
+            print ("Unable to identify correct base so no match.\n")
+    return isMatch
+
+dna = genDNA()
+rna = doTranscription(dna)
+print(verifySequence(dna, rna[0]))
 
