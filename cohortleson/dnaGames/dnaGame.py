@@ -90,8 +90,10 @@ def saveScore(dnaSequence: str, rnaSequence: str, rnaTime: float) -> None:
     # "a" mode -- Create FILE, FILE EXISTS, APPEND TO IT
     saveData.write(f"DNA Sequence: {dnaSequence}\nRNA Sequence: {rnaSequence}\n")
     saveData.write(f"Transcription Time: {rnaTime}\n")
-    saveDta.write(f"Score: {score}\n")
-    saveData.write(f"{datetime.datetime.now()}\n")    
+    saveData.write(f"Score: {score}\n")
+    saveData.write(f"{fullName}\n")
+    saveData.write(f"{datetime.datetime.now()}\n")
+    saveData.close()    
 
 dna = genDNA()
 rna = doTranscription(dna)
