@@ -68,8 +68,7 @@ def calcScore(rnaSequence: str, rnaTime: float) -> int:
 
     scoreMulti = 0.0
     if len(rnaSequence) > 30:
-    scoreMulti = 5.0
-    elif
+        scoreMulti = 5.0
     elif len(rnaSequence) >= 5:
         scoreMulti = 1.0
     else:
