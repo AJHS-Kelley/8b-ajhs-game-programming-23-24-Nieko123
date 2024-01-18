@@ -81,13 +81,17 @@ def saveScore(dnaSequence: str, rnaSequence: str, rnaTime: float) -> None:
     playerName = input("What is your first name?\n")
     lastName = input("What is your first name?\n")
     fullName = playerName + " " + ".txt"
-    saveData = open(fileName, MODE)
+    fileName = "dnaRep"
+    saveData = open(fileName, a)
+
     # File Modes
     #"x mode -- Create File, if file exists, exit with error"
     # "w" mode -- CREATE FILE, IF FILE EXISTS, OVERWRITE IT
     # "a" mode -- Create FILE, FILE EXISTS, APPEND TO IT
     saveData.write(f"DNA Sequence: {dnaSequence}\nRNA Sequence: {rnaSequence}\n")
-    saveData.write(f"Transcription Time: {rnaTime}\n")    
+    saveData.write(f"Transcription Time: {rnaTime}\n")
+    saveDta.write(f"Score: {score}\n")
+    saveData.write(f"{datetime.datetime.now()}\n")    
 
 dna = genDNA()
 rna = doTranscription(dna)
