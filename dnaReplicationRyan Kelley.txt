@@ -1,0 +1,6 @@
+DNA Sequence: CGTCT
+RNA Sequence: GCAGA
+Transcription Time: 11.871984004974365
+Score: 700000.0
+Ryan Kelley
+2024-02-01 13:59:07.852155
