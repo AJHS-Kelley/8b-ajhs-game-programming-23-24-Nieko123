@@ -14,12 +14,12 @@ def gameIntro() -> None:
     pass
 
 def genDNA() -> str:
-    bassesGenerated = 0
-    bassesRequested =int( input("Please Enter a positive interger number of bases to generate.\n"))
+    basesGenerated = 0
+    basesRequested =int( input("Please Enter a positive interger number of bases to generate.\n"))
     dnaSequence = ""
     while basesGenerated < basesRequested:
         dnaSequence += choice(dnaBases)
-        dnaGenerated ==1
+        basesGenerated += 1
     return dnaSequence
 
 dna = genDNA()
@@ -45,11 +45,11 @@ def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
     for dnaBase, rnaBase in(dnaSequence, rnaSequence):
         if dnaBase == "A" and rnaBase == "U":
             isMatch = True
-        elif dnaBase "C" and rnaBase == "C"
+        elif dnaBase == "C" and rnaBase == "C":
             isMatch = True
-        elif dnaBase "G" and rnaase == "C"
+        elif dnaBase == "G" and rnaase == "C":
             isMatch = True
-        elif dnaBase "T" and rnaBase =="A"
+        elif dnaBase == "T" and rnaBase == "A": 
             isMatch = True
         else:
             print ("Unable to identify correct base so no match.\n")
