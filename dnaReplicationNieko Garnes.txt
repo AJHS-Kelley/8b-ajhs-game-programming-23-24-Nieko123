@@ -1,0 +1,6 @@
+DNA Sequence: AGATCG
+RNA Sequence: UCUAGC
+Transcription Time: 29.169005155563354
+Score: 250000.0
+Nieko Garnes
+2024-02-13 14:05:16.039814
