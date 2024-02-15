@@ -1,4 +1,5 @@
 #Ultimate Pygame, Nieko Garnes
+# Get it finished, almost done! 
 
 import pygame
 from sys import exit
