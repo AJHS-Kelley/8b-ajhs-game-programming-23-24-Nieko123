@@ -9,8 +9,8 @@ pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font(None, 50)
 
-sky_surf = pygame.image.load(('img/ultPie/sky.jpg')).convert()
-ground_surf = pygame.image.load('img/ultPie/ground.jpg').convert()
+sky_surf = pygame.image.load(('img/ultPie/sky1.jfif')).convert()
+ground_surf = pygame.image.load('img/ultPie/ground2.jfif').convert()
 
 score_surf = test_font.render('My game', False, (64,64,64))
 score_rect = score_surf.get_rect(center = (400, 50))
@@ -18,7 +18,7 @@ score_rect = score_surf.get_rect(center = (400, 50))
 snail_surf = pygame.image.load('img/ultPie/snail.png').convert_alpha()
 snail_rect = snail_surf.get_rect(midbottom = (80,300))
 
-player_surf = pygame.image.load('img/ultPie/player_walk.png').convert_alpha()
+player_surf = pygame.image.load('img/ultPie/player_stand.png').convert_alpha()
 player_rect = player_surf.get_rect(midbottom =(0,0))
 
 while True:
@@ -29,7 +29,7 @@ while True:
         # if event.type == pygame.MOUSEMOTTON:
         #     if player_rect.collidepoint(event.pos): print('collision')
 
-    screen.blit(sky_surf,(300,50))
+    screen.blit(sky_surf,(300,25))
     screen.blit(ground_surf,(0,300))
     pygame.draw.rect(screen,'Pink', score_rect)
     pygame.draw.rect(screen,'Pink', score_rect,10)
