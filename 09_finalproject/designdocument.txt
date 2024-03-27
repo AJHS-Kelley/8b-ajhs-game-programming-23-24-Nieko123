@@ -3,3 +3,13 @@ Theme:
 
 Win condition(s):
 Lose condition(s):
+
+Levels / Screens:
+    -- 
+    -- 
+
+Objectives / Enemies / Obstacles:
+    --
+
+Items / Equipment / Objects:
+    -- 
