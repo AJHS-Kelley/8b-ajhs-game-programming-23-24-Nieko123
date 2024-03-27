@@ -1,15 +1,24 @@
-Game Genre / Type: 
-Theme: 
+Game Genre / Type: Sport
+Theme: Track
 
-Win condition(s):
-Lose condition(s):
+Win condition(s): Get to finish line in time
+Lose condition(s): Dont make time
 
 Levels / Screens:
-    -- 
+    -- at the track
     -- 
 
 Objectives / Enemies / Obstacles:
-    --
+    -- Finish before time limit
 
 Items / Equipment / Objects:
-    -- 
+    -- blocks
+
+Difficulty Changes:
+    -- Smaller time to get under
+    -- That's It
+
+Controls:
+    -- "A" and "D"
+
+
