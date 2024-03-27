@@ -14,12 +14,9 @@ pygame.init()
 
 difficulty = int(input("Please chose a difficulty, Enter 1 for Easy or 2 Hard.\n"))
 
-pygame.display.set_caption('NAME OF GAME -- EASY')
-pygame.display.set_caption('NAME OF GAME -- HARD')
-
-if difficulty = 1:
-    
+if difficulty ==1:
+   pygame.display.set_caption('NAME OF GAME -- EASY') 
 else:
-
+    pygame.display.set_caption('NAME OF GAME -- HARD')
 
 screen = pygame.display.set_mode((x, y))
