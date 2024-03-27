@@ -1,0 +1,5 @@
+Game Genre / Type: 
+Theme: 
+
+Win condition(s):
+Lose condition(s):
