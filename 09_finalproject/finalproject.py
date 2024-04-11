@@ -2,6 +2,13 @@
 import sys, random, pygame
 
 
+# test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
+
+# game_name = test_font.render('Track game', False, (111, 196, 169))
+# game_name_rect = game_name.get_rect(center = (400, 80))
+
+# game_message = test_font.render('press Space to start', False, (111, 196, 169))
+# game_name_rect = game_message.get_rect(center = (400, 330))
 
 resolution = 0 #0 = Low resolution (800, 600),1 = High Resilution (1920, 1080)
 
@@ -16,17 +23,25 @@ pygame.init()
 screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption('Track')
 
-sky_surface = pygame.image.load('img/ultPie/Sky.png').convert()
-ground_surface = pygame.image.load('img/ultPie/trackground.png').convert()
-
 difficulty = int(input("Please chose a difficulty, Enter 1 for Easy or 2 Hard.\n"))
 
-if difficulty ==1:
-   pygame.display.set_caption('Track -- EASY') 
-else:
-    pygame.display.set_caption('Track -- HARD')
+# sky_surface = pygame.image.load('img/ultPie/sponge_sky.jpg').convert()
+ground_surface = pygame.image.load('img/ultPie/ground.png').convert()
 
-screen.blit(background_surface,(400,400))
+# Intro screen
+player_stand = pygame.image.load('img/ultPie/player_stand.png').convert_alpha()
+player_stand = pygame.transform.rotozoom(player_stand,0,2)
+player_stand_rect = player_stand.get_rect(center = (400,200))
+
+game_name = test_font.render('Pixel Runner',False,(111,196,169))
+game_name_rect = game_name.get_rect(center = (400,80))
+
+game_message = test_font.render('Press space to run',False,(111,196,169))
+game_message_rect = game_message.get_rect(center = (400,330))
+
+# Timer 
+obstacle_timer = pygame.USEREVENT + 1
+pygame.time.set_timer(obstacle_timer,1500)
 
 while True:
 	for event in pygame.event.get():
@@ -35,9 +50,11 @@ while True:
 			exit()
 
 		if game_active:
-			if event.type == obstacle_timer:
-				obstacle_group.add(Obstacle(choice(['','','',''])))
-		
+			screen.blit(ground_surface,(0,300))
+
+		if event.type == obstacle_timer:
+			pass
+				# obstacle_group.add(Obstacle(choice(['fly','snail','snail','snail'])))
 		else:
 			if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
 				game_active = True
@@ -45,15 +62,15 @@ while True:
 
 
 	if game_active:
-		screen.blit(sky_surface,(0,0))
+		# screen.blit(sky_surface,(0,0))
 		screen.blit(ground_surface,(0,300))
-		score = display_score()
+		# score = display_score()
 		
-		player.draw(screen)
-		player.update()
+		# player.draw(screen)
+		# player.update()
 
-		obstacle_group.draw(screen)
-		obstacle_group.update()
+		# obstacle_group.draw(screen)
+		# obstacle_group.update()
 
 		game_active = collision_sprite()
 		
@@ -69,9 +86,9 @@ while True:
 		else: screen.blit(score_message,score_message_rect)
 
 	pygame.display.update()
-	clock.tick(60)
+	# clock.tick(60)
 
 
 #Back Ground
-# background_surface = pygame.image.load('img/ultPie/trackbackground.png').convert()
+background_surface = pygame.image.load('img/ultPie/trackbackground.png').convert()
 
