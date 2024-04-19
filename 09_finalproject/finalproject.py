@@ -29,7 +29,7 @@ scroll_speed = 4
 flying = False
 game_over = False
 pipe_gap = 150
-pipe_frequency = 1500 #milliseconds
+pipe_frequency = 1500
 last_pipe = pygame.time.get_ticks() - pipe_frequency
 
 
@@ -71,7 +71,6 @@ class Bird(pygame.sprite.Sprite):
 			if pygame.mouse.get_pressed()[0] == 0:
 				self.clicked = False
 
-			#handle the animation
 			self.counter += 1
 			flap_cooldown = 5
 
@@ -132,14 +131,14 @@ while run:
 	#draw the ground
 	screen.blit(ground_img, (ground_scroll, 768))
 
-	#look for collision
-	if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
-		game_over = True
+	# #look for collision
+	# if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
+	# 	game_over = True
 
-	#check if bird has hit the ground
-	if flappy.rect.bottom >= 768:
-		game_over = True
-		flying = False
+	# #check if bird has hit the ground
+	# if flappy.rect.bottom >= 768:
+	# 	game_over = True
+	# 	flying = False
 
 
 	if game_over == False and flying == True:
