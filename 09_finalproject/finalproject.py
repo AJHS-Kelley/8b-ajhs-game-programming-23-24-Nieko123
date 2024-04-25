@@ -1,5 +1,11 @@
 # Final Project, Nieko Garnes, v0.0
 
+
+# Add Score Counter 
+# Start Screen 
+# Difficulty --> Smaller Pipe Opening, Bigger Character, Faster Scroll Speed
+# Make it so only ONE pipe shows up. 
+
 import pygame
 from pygame.locals import *
 import random
@@ -131,14 +137,14 @@ while run:
 	#ground
 	screen.blit(ground_img, (ground_scroll, 768))
 
-	# #look for collision
-	# if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
-	# 	game_over = True
+	#look for collision
+	if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
+		game_over = True
 
-	# #check if bird has hit the ground
-	# if flappy.rect.bottom >= 768:
-	# 	game_over = True
-	# 	flying = False
+	#check if bird has hit the ground
+	if flappy.rect.bottom >= 768:
+		game_over = True
+		flying = False
 
 
 	if game_over == False and flying == True:
