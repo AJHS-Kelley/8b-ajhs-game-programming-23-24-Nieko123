@@ -121,14 +121,14 @@ while run:
 
 	clock.tick(fps)
 
-	#draw background
+	#background
 	screen.blit(bg, (0,0))
 
 	bird_group.draw(screen)
 	bird_group.update()
 	pipe_group.draw(screen)
 
-	#draw the ground
+	#ground
 	screen.blit(ground_img, (ground_scroll, 768))
 
 	# #look for collision
@@ -143,7 +143,7 @@ while run:
 
 	if game_over == False and flying == True:
 
-		#generate new pipes
+		#generate pipe
 		time_now = pygame.time.get_ticks()
 		if time_now - last_pipe > pipe_frequency:
 			pipe_height = random.randint(-100, 100)
@@ -154,7 +154,7 @@ while run:
 			last_pipe = time_now
 
 
-		#draw and scroll the ground
+		#scroll the ground
 		ground_scroll -= scroll_speed
 		if abs(ground_scroll) > 35:
 			ground_scroll = 0
