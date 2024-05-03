@@ -30,7 +30,7 @@ pygame.display.set_caption('Fly Man')
 font = pygame.font.SysFont('Bauhaus 93', 60)
 
 #define colours
-white = (255, 255, 255)
+BLACK = (0, 0, 0)
 
 #define game variables
 ground_scroll = 0
@@ -160,7 +160,7 @@ while run:
 				pass_pipe = False
 
 
-	draw_text(str(score), font, white, int(screen_width / 2), 20)
+	draw_text(str(score), font, BLACK, int(screen_width / 2), 20)
 
 	#look for collision
 	if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
