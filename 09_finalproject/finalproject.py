@@ -8,6 +8,25 @@ import random
 
 pygame.init()
 
+# Difficulty
+EASY = 0
+MEDIUM = 1
+HARD = 2
+
+# Set the difficulty
+difficulty = EASY
+
+# Define difficulty para
+if difficulty == EASY:
+    pipe_frequency = 2000
+    scroll_speed = 3
+elif difficulty == MEDIUM:
+    pipe_frequency = 1500
+    scroll_speed = 4
+elif difficulty == HARD:
+    pipe_frequency = 1000
+    scroll_speed = 5
+
 
 clock = pygame.time.Clock()
 fps = 60
